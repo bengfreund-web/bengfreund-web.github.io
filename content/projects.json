@@ -1,0 +1,325 @@
+[
+  {
+    "id": "myru-registration",
+    "title": "Montana Youth Rugby Registration Analytics",
+    "org": "Montana Youth Rugby Union",
+    "headline": "Turned complex Rugby Xplorer registration exports into a self-serve analytics tool that lets Montana Youth Rugby program managers track growth, retention, and reach across 8 clubs.",
+    "problem": "Rugby Xplorer registration reports are complex and can't be cross-referenced across seasons or programs, so program managers had no easy way to compare clubs or see trends.",
+    "features": [
+      {
+        "name": "AI Overview",
+        "detail": "Every filter change generates a plain-English summary of what the numbers mean."
+      },
+      {
+        "name": "Explore and Query",
+        "detail": "Seven filters and a Breakdown view slice 2,615 registrations instantly, with CSV and PNG export."
+      },
+      {
+        "name": "Compare",
+        "detail": "Any two programs, teams, or age bands side by side across seasons."
+      },
+      {
+        "name": "Upload and update",
+        "detail": "New Rugby Xplorer exports drop straight in, with duplicates skipped, so the tool grows every season."
+      },
+      {
+        "name": "Secure by design",
+        "detail": "Google sign-in and a de-identified default view."
+      }
+    ],
+    "insights": [
+      "Statewide player registrations tripled, from 257 in 2023 to 783 in 2026.",
+      "38% of player registrations are returning players.",
+      "Missoula, Bozeman, and Helena lead, with players spread across Montana.",
+      "Gallatin Wranglers is the largest program at 21% of players, and team-level views show where individual teams peaked or declined."
+    ],
+    "result": "Program managers can now see growth, retention, location, and program-level trends in one place instead of digging through raw exports.",
+    "summary": "Those exports can't be cross-referenced across seasons or programs, so there was no easy way to compare clubs or see trends. Now it all lives in one place instead of raw registration files.",
+    "inDevelopment": [],
+    "tags": [
+      "Claude Code",
+      "Netlify",
+      "Google Sign-In",
+      "AI Summaries"
+    ],
+    "liveUrl": null,
+    "liveNote": "Sign-in required to protect player data, so screenshots are shown.",
+    "media": [
+      {
+        "src": "assets/projects/myru-registration/01-overview-ai-query.png",
+        "alt": "Registration analytics overview with filters and an AI-written summary of player registrations",
+        "caption": "AI Overview and query filters"
+      },
+      {
+        "src": "assets/projects/myru-registration/02-statewide-growth-map.png",
+        "alt": "Bar chart of player registrations rising from 257 in 2023 to 783 in 2026, with a Montana player map",
+        "caption": "Statewide growth and where players are"
+      },
+      {
+        "src": "assets/projects/myru-registration/03-team-new-vs-returning.png",
+        "alt": "Stacked bar chart of new versus returning players for one team by season",
+        "caption": "Team-level new vs returning players"
+      },
+      {
+        "src": "assets/projects/myru-registration/04-secure-sign-in.png",
+        "alt": "Google sign-in screen for the registration analytics tool",
+        "caption": "Sign-in protected"
+      }
+    ],
+    "mediaTodo": [
+      "Compare tab showing two programs side by side",
+      "Breakdown section grouped by program",
+      "15-second screen recording of filters changing and the AI Overview rewriting"
+    ]
+  },
+  {
+    "id": "usa-rugby-analytics",
+    "title": "USA Rugby Match Analytics",
+    "org": "USA Rugby",
+    "headline": "Built a match analytics platform that ties an expected points model and match stats directly to film, presented to the USA Rugby head coach and analysts.",
+    "problem": "Standard match stats count events equally and don't show which moments actually swung the result.",
+    "features": [
+      {
+        "name": "Expected points model",
+        "detail": "Ranks match moments by their impact on scoring expectation, and every moment opens the actual footage."
+      },
+      {
+        "name": "Automated match analysis",
+        "detail": "A \"why the match went this way\" summary covering red zone conversion, turnovers, lineouts, and missed tackles."
+      },
+      {
+        "name": "Possession and momentum",
+        "detail": "A rolling view of who controlled the ball across all 80 minutes."
+      },
+      {
+        "name": "Season overview",
+        "detail": "Record, points, tries, and 11 trend metrics across an 11-match season, plus a Tier 1 benchmark."
+      },
+      {
+        "name": "Interactive queries",
+        "detail": "Switch between team, player, and game views across eight match tabs, from Match Sheet to Field Maps."
+      },
+      {
+        "name": "Import pipeline",
+        "detail": "New games added straight from Hudl Sportscode data."
+      }
+    ],
+    "insights": [],
+    "result": "Presented to the USA Rugby head coach and analyst staff.",
+    "summary": "Standard match stats count events equally and don't show which moments actually swung the result, so the platform ranks each moment by its effect on the scoreline and links it to the film.",
+    "inDevelopment": [
+      "Stat lines linked to video: click any stat, such as a missed tackle or a lineout, to jump to those clips for coach review.",
+      "Video analysis built directly on match film.",
+      "AI analysis being trained toward predictive models."
+    ],
+    "tags": [
+      "Claude Code",
+      "GitHub Pages",
+      "Hudl Sportscode",
+      "Expected Points Modeling"
+    ],
+    "liveUrl": "https://bengfreund-web.github.io/usa-rugby-analytics/",
+    "liveNote": null,
+    "media": [
+      {
+        "src": "assets/projects/usa-rugby-analytics/01-season-overview.png",
+        "alt": "USA Rugby program overview with a 6-5 record and a season trends chart of points for and against",
+        "caption": "Season overview and trends"
+      },
+      {
+        "src": "assets/projects/usa-rugby-analytics/02-possession-with-data-note.png",
+        "alt": "USA vs Argentina XV 25-24 match page with a rolling possession chart and a note explaining simulated player data",
+        "caption": "Possession through the match, with a clear note on simulated data"
+      }
+    ],
+    "mediaTodo": [
+      "Moments tab showing expected points rankings",
+      "Analysis tab, after the scoring and turnover fixes",
+      "Short recording: click a moment and the footage opens"
+    ]
+  },
+  {
+    "id": "varsity-rugby",
+    "title": "Montana Varsity Rugby Initiative",
+    "org": "Montana Institute of Sport",
+    "headline": "Built the public proposal site for making rugby a sanctioned varsity sport in Montana high schools, used by the MHSA and athletic directors reviewing the pilot.",
+    "problem": "Convincing the MHSA, athletic directors, and coaches means answering cost, safety, logistics, and demand questions in one credible place.",
+    "features": [
+      {
+        "name": "Interactive cost model",
+        "detail": "Every line item expands to show its math, with $4,402.06 per school per year fully covered by MIS, so schools pay $0 for three seasons."
+      },
+      {
+        "name": "Season and match-day plan",
+        "detail": "Four tournament days plus a State Championship, tied directly to the referee cost."
+      },
+      {
+        "name": "Statewide foundation map",
+        "detail": "The 8 program cities, each with its roughly 50-mile reach."
+      },
+      {
+        "name": "Evidence and momentum",
+        "detail": "National growth, NCAA Emerging Sport status, and Olympic and 2031 World Cup context."
+      },
+      {
+        "name": "Timeline and FAQ",
+        "detail": "Answers the questions athletic directors ask about safety, girls' divisions, travel, and coaching."
+      },
+      {
+        "name": "Conversion",
+        "detail": "Every call to action routes to the expression of interest form."
+      }
+    ],
+    "insights": [],
+    "result": "Adopted as the reference site for the MHSA and athletic directors evaluating the sanctioning pilot.",
+    "summary": "Sanctioning a new sport means answering cost, safety, logistics, and demand questions in one credible place, which is exactly what the proposal site is built to do.",
+    "inDevelopment": [],
+    "tags": [
+      "Claude Code",
+      "GitHub",
+      "Custom Domain",
+      "Google Forms"
+    ],
+    "liveUrl": "https://varsityrugbymontana.org",
+    "liveNote": null,
+    "media": [
+      {
+        "src": "assets/projects/varsity-rugby/01-hero.png",
+        "alt": "Varsity rugby initiative homepage headline: Bringing Varsity Rugby to Montana High Schools",
+        "caption": "The proposal"
+      },
+      {
+        "src": "assets/projects/varsity-rugby/02-cost-model.png",
+        "alt": "Line-item program cost breakdown totaling $4,402.06 with a full subsidy bringing net school cost to $0",
+        "caption": "Transparent cost model"
+      },
+      {
+        "src": "assets/projects/varsity-rugby/03-statewide-foundation-map.png",
+        "alt": "Map of Montana showing 8 existing rugby program cities",
+        "caption": "A foundation already in place"
+      }
+    ],
+    "mediaTodo": [
+      "Cost breakdown with one line expanded to show its math",
+      "Map with a city's 50-mile reach showing on hover",
+      "Short recording clicking through the cost lines"
+    ]
+  },
+  {
+    "id": "try-sport",
+    "title": "TRY Sport Website and Live Impact Tracker",
+    "org": "Montana Institute of Sport",
+    "headline": "Built the website for TRY Rugby, a Montana Institute of Sport program working to introduce rugby to every student in the state, with a live impact tracker connected directly to the program's Google Sheet.",
+    "problem": "The board, donors, and schools needed a real-time, one-glance view of how many Montana students the program has reached and how many are still waiting.",
+    "features": [
+      {
+        "name": "Live impact tracker",
+        "detail": "Connected to the program's Google Sheet, so the counts and school map update automatically as schools are reached, with no manual edits."
+      },
+      {
+        "name": "Statewide school map",
+        "detail": "All 812 tracked schools shown as squares, sorted by enrollment and colored by status, with the school name on hover."
+      },
+      {
+        "name": "Reached vs remaining",
+        "detail": "89,115 students reached and 62,465 still waiting, which turns the remaining gap into the funding case."
+      },
+      {
+        "name": "Print and PDF export",
+        "detail": "Ready for board meetings and donor packets."
+      },
+      {
+        "name": "Program site",
+        "detail": "TRY Sport and TRY Rugby pages, 8 teacher testimonials, and Donate and Bring Us to Your School calls to action."
+      }
+    ],
+    "insights": [],
+    "result": "Gives the MIS board, donors, and schools a real-time view of statewide progress toward reaching every Montana student.",
+    "inDevelopment": [],
+    "tags": [
+      "Claude Code",
+      "Google Sheets Integration",
+      "Live Data Visualization"
+    ],
+    "liveUrl": "https://trysport.org",
+    "liveNote": null,
+    "media": [
+      {
+        "src": "assets/projects/try-sport/01-impact-tracker.png",
+        "alt": "Impact tracker headline: Rugby has reached 89,115 Montana students, 62,465 are still waiting, above a grid of squares for every tracked school",
+        "caption": "Live statewide impact tracker"
+      },
+      {
+        "src": "assets/projects/try-sport/02-homepage-hero.png",
+        "alt": "TRY Sport homepage with young students playing rugby",
+        "caption": "TRY Sport homepage"
+      },
+      {
+        "src": "assets/projects/try-sport/03-teacher-testimonial.png",
+        "alt": "Teacher testimonial from Whitefish Middle School about TRY Rugby",
+        "caption": "Teacher testimonials"
+      }
+    ],
+    "mediaTodo": [
+      "Short recording of the tracker counts loading live from the sheet and hovering across school squares"
+    ]
+  },
+  {
+    "id": "email-automation",
+    "title": "Automated Interest-to-Registration Email System",
+    "org": "Montana Youth Rugby Union",
+    "headline": "Built an automated system that has answered 2,000+ Montana Youth Rugby interest forms, instantly sending each family a tailored email by age band, gender, and zip code and cutting average outreach time by 90%.",
+    "problem": "Families found interest forms on social media and the website, then waited on manual replies, with staff retyping schedules, costs, and registration details for each program.",
+    "features": [
+      {
+        "name": "Multi-channel intake",
+        "detail": "Interest forms shared on social media and the website feed a single Google Sheet."
+      },
+      {
+        "name": "Rules-based routing",
+        "detail": "A script filters each response by age band, gender, and zip code, then picks the matching email for that player's club and program."
+      },
+      {
+        "name": "Seasonal content",
+        "detail": "Emails are updated each season, so families always get current schedules, costs, and events."
+      },
+      {
+        "name": "Conversion-focused emails",
+        "detail": "Season blocks, training times, a cost breakdown, college pathways, a live calendar link, and a Register Online button."
+      }
+    ],
+    "insights": [],
+    "result": "2,000+ interest forms answered automatically and a 90% reduction in average outreach time.",
+    "inDevelopment": [],
+    "note": "Built before Claude Code using early ChatGPT coding capabilities in 2025.",
+    "tags": [
+      "Google Apps Script",
+      "Google Sheets",
+      "Google Forms",
+      "Automation"
+    ],
+    "liveUrl": null,
+    "liveNote": "Runs inside Google Workspace, so a sample email and the routing flow are shown.",
+    "flowDiagram": [
+      "Social media and website",
+      "Interest form",
+      "Google Sheet",
+      "Routing by age band, gender, and zip code",
+      "Tailored program email"
+    ],
+    "media": [
+      {
+        "src": "assets/projects/email-automation/01-email-desktop.png",
+        "alt": "Welcome email to a sample family listing Gallatin Wranglers programs and the season schedule",
+        "caption": "A tailored welcome email, sent in seconds"
+      },
+      {
+        "src": "assets/projects/email-automation/03-code.png",
+        "alt": "Google Apps Script code for the sendGallatinWelcomeEmail function that reads a form submission, builds the tailored HTML email, and sends it with MailApp",
+        "caption": "The full Google Apps Script (click to read)",
+        "fit": "top"
+      }
+    ],
+    "mediaTodo": []
+  }
+]

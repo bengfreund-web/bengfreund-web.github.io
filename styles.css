@@ -1,0 +1,173 @@
+/* Benjamin Freund portfolio - simple, white, read-in-seconds.
+   Each project: title + who it's for + one paragraph + link on the left,
+   a small click-through screenshot carousel on the right. */
+
+:root {
+  --ink: #171717;
+  --muted: #6b6b6b;
+  --paper: #ffffff;
+  --line: #e6e5e2;
+  --focus: #171717;
+
+  --sans: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --measure: 56ch;
+  --maxw: 1080px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+
+a { color: inherit; }
+
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 2px; }
+
+.skip-link {
+  position: absolute; left: -9999px; top: 0;
+  background: var(--ink); color: var(--paper); padding: 10px 16px; z-index: 100; border-radius: 0 0 6px 0;
+}
+.skip-link:focus { left: 0; }
+
+/* ---------- Header ---------- */
+.site-header { padding: 76px 0 20px; }
+
+.header-inner .name {
+  font-weight: 700;
+  font-size: clamp(2.1rem, 5vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+}
+.tagline {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--muted);
+  font-weight: 400;
+  max-width: 46ch;
+  margin: 0 0 26px;
+  line-height: 1.5;
+}
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+.btn {
+  display: inline-block; font: inherit; font-size: 0.9rem; font-weight: 500;
+  text-decoration: none; padding: 9px 18px; border-radius: 6px;
+  border: 1px solid var(--ink); background: var(--paper); color: var(--ink);
+  transition: background .15s ease, color .15s ease, transform .1s ease;
+}
+.btn:hover { background: #f4f4f2; }
+.btn:active { transform: translateY(1px); }
+.btn-solid { background: var(--ink); color: var(--paper); }
+.btn-solid:hover { background: var(--ink); opacity: .85; }
+
+@keyframes rise-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.header-inner { animation: rise-in .45s ease both; }
+@media (prefers-reduced-motion: reduce) { .header-inner { animation: none; } }
+
+/* ---------- Projects ---------- */
+.projects { display: flex; flex-direction: column; }
+
+.project {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  grid-template-areas: "text media" "link media";
+  grid-template-rows: 1fr auto;
+  column-gap: 56px;
+  row-gap: 20px;
+  align-items: start;
+  padding: 56px 0;
+  border-top: 1px solid var(--line);
+}
+.project-text { grid-area: text; }
+.project-media { grid-area: media; }
+.project-link { grid-area: link; align-self: end; }
+
+.project-title { font-weight: 600; font-size: clamp(1.3rem, 2.4vw, 1.6rem); line-height: 1.25; margin: 0 0 4px; }
+.project-org { color: var(--muted); font-size: 0.9rem; font-weight: 500; margin: 0 0 18px; }
+.project-desc { font-size: 1.02rem; line-height: 1.6; margin: 0; max-width: var(--measure); color: var(--ink); }
+.project-desc + .project-desc { margin-top: 15px; }
+.build-note { font-size: 0.85rem; color: var(--muted); margin: 14px 0 0; max-width: var(--measure); font-style: italic; }
+
+.visit {
+  display: inline-block; font-weight: 600; font-size: 0.95rem;
+  color: var(--ink); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1.5px;
+}
+.visit:hover { text-decoration-thickness: 2.5px; }
+.live-note { color: var(--muted); font-size: 0.9rem; margin: 0; max-width: var(--measure); }
+
+/* ---------- Carousel (small, right) ---------- */
+.carousel { width: 100%; }
+.carousel-frame {
+  position: relative;
+  height: 236px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--paper);
+  overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.carousel-slide { display: none; width: 100%; height: 100%; margin: 0; }
+.carousel-slide.is-active { display: flex; }
+.carousel-slide button {
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; height: 100%; padding: 10px; border: 0; background: none; cursor: zoom-in;
+}
+.carousel-slide img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block; }
+/* Tall images (e.g. full code) fill the frame from the top instead of shrinking to a sliver */
+.carousel-slide img.fit-top { width: 100%; height: 100%; max-height: none; object-fit: cover; object-position: top center; }
+
+.carousel-controls { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 12px; }
+.car-nav {
+  width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--line);
+  background: var(--paper); color: var(--ink); font-size: 1rem; line-height: 1; cursor: pointer; flex: 0 0 auto;
+}
+.car-nav:hover { border-color: var(--ink); }
+.carousel-dots { display: flex; gap: 7px; }
+.dot { width: 8px; height: 8px; padding: 0; border-radius: 50%; border: 0; background: #d2d1cd; cursor: pointer; }
+.dot.is-active { background: var(--ink); }
+.carousel-cap { color: var(--muted); font-size: 0.82rem; text-align: center; margin: 10px 2px 0; }
+
+/* Stack on narrow screens: text, then screenshots, then link */
+@media (max-width: 820px) {
+  .project {
+    grid-template-columns: 1fr;
+    grid-template-areas: "text" "media" "link";
+    grid-template-rows: auto auto auto;
+    column-gap: 0;
+    row-gap: 22px;
+  }
+  .project-media { max-width: 420px; }
+  .project-link { align-self: start; }
+}
+
+/* ---------- How I build + footer ---------- */
+.how-i-build { border-top: 1px solid var(--line); padding: 40px 0; color: var(--muted); font-size: 0.95rem; max-width: var(--measure); }
+.site-footer { border-top: 1px solid var(--line); margin-top: 20px; }
+.footer-inner { padding: 40px 0 68px; }
+.footer-line { color: var(--muted); font-size: 0.85rem; margin: 18px 0 0; }
+
+/* ---------- Lightbox ---------- */
+.lightbox { position: fixed; inset: 0; background: rgba(20,20,20,0.9); display: flex; align-items: center; justify-content: center; z-index: 200; padding: 24px; }
+.lightbox[hidden] { display: none; }
+.lb-figure { margin: 0; max-width: 1000px; max-height: 88vh; overflow: auto; display: flex; flex-direction: column; background: #fff; border-radius: 6px; }
+.lb-figure img { width: 100%; max-width: 100%; height: auto; display: block; background: #fff; }
+#lb-caption { color: #555; text-align: center; padding: 10px 12px 14px; font-size: 0.9rem; background: #fff; }
+.lb-close { position: absolute; top: 16px; right: 20px; font-size: 2rem; line-height: 1; background: none; border: 0; color: #fff; cursor: pointer; padding: 8px; }
+.lb-nav { background: rgba(255,255,255,0.12); border: 0; color: #fff; font-size: 2.1rem; line-height: 1; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; flex: 0 0 auto; margin: 0 8px; }
+.lb-nav:hover { background: rgba(255,255,255,0.24); }
+@media (max-width: 620px) { .lb-nav { position: absolute; bottom: 20px; } .lb-prev { left: 30%; } .lb-next { right: 30%; } }

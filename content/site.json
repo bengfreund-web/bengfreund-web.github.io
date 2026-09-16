@@ -1,0 +1,39 @@
+{
+  "name": "Benjamin Freund",
+  "tagline": "Cal Poly business analytics student building data tools and automation for USA Rugby and Montana sport organizations.",
+  "howIBuild": "I scope each problem with the people who will use it, write the spec, and ship it with Claude Code.",
+  "links": {
+    "resume": "assets/resume/Benjamin-Freund-Resume.pdf",
+    "linkedin": "https://linkedin.com/in/benfreund145",
+    "github": "https://github.com/bengfreund-web",
+    "email": "bgfreund@calpoly.edu"
+  },
+  "impactBar": [
+    {
+      "value": "89,000+",
+      "label": "Montana students reached",
+      "project": "try-sport"
+    },
+    {
+      "value": "2,000+",
+      "label": "interest forms answered automatically",
+      "project": "email-automation"
+    },
+    {
+      "value": "2,615",
+      "label": "registrations turned into insights",
+      "project": "myru-registration"
+    },
+    {
+      "value": "$0",
+      "label": "cost to schools for three varsity seasons",
+      "project": "varsity-rugby"
+    },
+    {
+      "value": "11",
+      "label": "Test matches analyzed for USA Rugby",
+      "project": "usa-rugby-analytics"
+    }
+  ],
+  "footer": "Built with Claude Code. Hosted on GitHub Pages."
+}

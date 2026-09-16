@@ -1,0 +1,9 @@
+# Internal notes, specs, and original source — never published
+source/
+PRE-LAUNCH-CHECKLIST.md
+CLAUDE.md
+DESIGN.md
+
+# Local dev / tooling
+.claude/
+.DS_Store
