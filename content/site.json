@@ -35,6 +35,48 @@
       "project": "usa-rugby-analytics"
     }
   ],
+  "contentSocial": {
+    "intro": "Alongside the sites, I run the social media and video for these programs.",
+    "stats": [
+      { "value": "385.5K", "label": "views" },
+      { "value": "62.3K", "label": "accounts reached" }
+    ],
+    "statNote": "in two months on {ig}, the Instagram I run",
+    "instagram": "https://www.instagram.com/greatnorthwestchallenge/",
+    "instagramHandle": "@greatnorthwestchallenge",
+    "video": {
+      "title": "Great Northwest Challenge Rugby Tournament 2026 Recap",
+      "url": "https://www.youtube.com/watch?v=gUOQj7AJZYA",
+      "img": "assets/projects/social/yt-gUOQj7AJZYA.jpg",
+      "channel": "Montana Institute of Sport on YouTube",
+      "channelUrl": "https://www.youtube.com/@MontanaInstituteOfSport",
+      "channelMeta": "860 subscribers and 230 videos"
+    },
+    "posts": [
+      { "img": "assets/projects/social/ig-gnc-DZ8H_8fDC6H.jpg", "url": "https://www.instagram.com/p/DZ8H_8fDC6H/", "alt": "Great Northwest Challenge Instagram post" },
+      { "img": "assets/projects/social/ig-gnc-DZi0Ad9htVm.jpg", "url": "https://www.instagram.com/p/DZi0Ad9htVm/", "alt": "Great Northwest Challenge Instagram post" },
+      { "img": "assets/projects/social/ig-mi-DXadTO0D90z.jpg", "url": "https://www.instagram.com/p/DXadTO0D90z/", "alt": "Montana Invitational Instagram post" },
+      { "img": "assets/projects/social/ig-mi-DXk1r2HGv7N.jpg", "url": "https://www.instagram.com/p/DXk1r2HGv7N/", "alt": "Montana Invitational Instagram post" }
+    ],
+    "postsNote": "A few posts from {gnc} and {mi}, both accounts I run.",
+    "miInstagram": "https://www.instagram.com/montanainvitational/",
+    "miHandle": "@montanainvitational"
+  },
+  "design": {
+    "intro": "I also design the event flyers, fundraising invites, and social graphics for these programs.",
+    "items": [
+      { "img": "assets/projects/design/p2-1.png", "caption": "MIS fundraising: All Blacks v Ireland dinner, Chicago" },
+      { "img": "assets/projects/design/p2-2.png", "caption": "MIS fundraising: Italian wine tasting save the date" },
+      { "img": "assets/projects/design/p4-1.png", "caption": "Montana Invitational tournament graphic" },
+      { "img": "assets/projects/design/p4-2.png", "caption": "Montana Invitational tournament graphic" },
+      { "img": "assets/projects/design/p3-1.png", "caption": "Referee course promotion" },
+      { "img": "assets/projects/design/p3-2.png", "caption": "Referee course promotion" },
+      { "img": "assets/projects/design/p5-1.png", "caption": "Montana Youth Rugby graphic" },
+      { "img": "assets/projects/design/p5-2.png", "caption": "Montana Youth Rugby graphic" },
+      { "img": "assets/projects/design/p5-3.png", "caption": "Montana Youth Rugby graphic" },
+      { "img": "assets/projects/design/p5-4.png", "caption": "Montana Youth Rugby graphic" }
+    ]
+  },
   "moreWork": [
     {
       "title": "TACKLE Montana",

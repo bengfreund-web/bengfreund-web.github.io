@@ -25,7 +25,12 @@
     "assets/projects/mis-website/03-programs-html.png": [2880, 1800],
     "assets/projects/email-automation/01-email-desktop.png": [1520, 2200],
     "assets/projects/email-automation/02-email-mobile.png": [1170, 3600],
-    "assets/projects/email-automation/03-code.png": [2160, 14518]
+    "assets/projects/email-automation/03-code.png": [2160, 14518],
+    "assets/projects/social/yt-gUOQj7AJZYA.jpg": [1280, 720],
+    "assets/projects/social/ig-gnc-DZ8H_8fDC6H.jpg": [640, 360],
+    "assets/projects/social/ig-gnc-DZi0Ad9htVm.jpg": [640, 360],
+    "assets/projects/social/ig-mi-DXadTO0D90z.jpg": [640, 639],
+    "assets/projects/social/ig-mi-DXk1r2HGv7N.jpg": [640, 639]
   };
 
   function el(tag, cls, text) {
@@ -196,6 +201,141 @@
     return car;
   }
 
+  /* ---------------- Content & social ---------------- */
+  // Social images are .jpg sources with WebP in assets/img/social/ at fixed widths.
+  function socialImg(src, widths, sizes, alt, eager) {
+    var name = src.replace("assets/projects/social/", "").replace(/\.jpg$/, "");
+    var img = el("img");
+    var set = widths.map(function (w) { return "assets/img/social/" + name + "-" + w + ".webp " + w + "w"; });
+    img.src = "assets/img/social/" + name + "-" + widths[0] + ".webp";
+    img.srcset = set.join(", ");
+    img.sizes = sizes;
+    img.alt = alt || "";
+    img.loading = eager ? "eager" : "lazy";
+    img.decoding = "async";
+    var d = DIMS[src];
+    if (d) { img.width = d[0]; img.height = d[1]; }
+    return img;
+  }
+
+  function withHandles(text, map) {
+    // Replace {key} tokens with linked handles. map: {key:{handle,url}}
+    var frag = document.createDocumentFragment();
+    var re = /\{(\w+)\}/g, last = 0, m;
+    while ((m = re.exec(text)) !== null) {
+      if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+      var info = map[m[1]];
+      if (info) {
+        var a = el("a", "cs-handle", info.handle);
+        a.href = info.url; a.target = "_blank"; a.rel = "noopener";
+        frag.appendChild(a);
+      } else {
+        frag.appendChild(document.createTextNode(m[0]));
+      }
+      last = re.lastIndex;
+    }
+    if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+    return frag;
+  }
+
+  function renderContentSocial(site) {
+    var host = document.getElementById("content-social");
+    var cs = site.contentSocial;
+    if (!host || !cs) return;
+    host.innerHTML = "";
+    host.appendChild(el("h2", "cs-title", "Content & social"));
+    if (cs.intro) host.appendChild(el("p", "cs-intro", cs.intro));
+
+    // Stats
+    if (cs.stats && cs.stats.length) {
+      var statsWrap = el("div", "cs-stats");
+      cs.stats.forEach(function (s) {
+        var stat = el("div", "cs-stat");
+        stat.appendChild(el("span", "cs-stat-value", s.value));
+        stat.appendChild(el("span", "cs-stat-label", s.label));
+        statsWrap.appendChild(stat);
+      });
+      host.appendChild(statsWrap);
+      if (cs.statNote) {
+        var note = el("p", "cs-note");
+        note.appendChild(withHandles(cs.statNote, { ig: { handle: cs.instagramHandle, url: cs.instagram } }));
+        host.appendChild(note);
+      }
+    }
+
+    // Highlight video (links to YouTube, no third-party embed)
+    if (cs.video) {
+      var v = cs.video;
+      var va = el("a", "cs-video");
+      va.href = v.url; va.target = "_blank"; va.rel = "noopener";
+      va.setAttribute("aria-label", "Watch on YouTube: " + v.title);
+      var frame = el("div", "cs-video-frame");
+      frame.appendChild(socialImg(v.img, [800, 1280], "(max-width: 760px) 92vw, 680px", v.title));
+      frame.appendChild(el("span", "cs-play", ""));
+      va.appendChild(frame);
+      host.appendChild(va);
+      var vcap = el("p", "cs-video-cap");
+      vcap.appendChild(el("span", "cs-video-title", v.title));
+      var chan = el("span", "cs-video-chan");
+      chan.appendChild(document.createTextNode(" " + v.channel + " (" + v.channelMeta + ")"));
+      vcap.appendChild(chan);
+      host.appendChild(vcap);
+    }
+
+    // Example posts
+    if (cs.posts && cs.posts.length) {
+      var strip = el("div", "cs-posts");
+      cs.posts.forEach(function (p) {
+        var a = el("a", "cs-post");
+        a.href = p.url; a.target = "_blank"; a.rel = "noopener";
+        a.setAttribute("aria-label", "View Instagram post: " + (p.alt || ""));
+        a.appendChild(socialImg(p.img, [640], "(max-width: 720px) 44vw, 240px", p.alt));
+        strip.appendChild(a);
+      });
+      host.appendChild(strip);
+      if (cs.postsNote) {
+        var pnote = el("p", "cs-note");
+        pnote.appendChild(withHandles(cs.postsNote, {
+          gnc: { handle: cs.instagramHandle, url: cs.instagram },
+          mi: { handle: cs.miHandle, url: cs.miInstagram }
+        }));
+        host.appendChild(pnote);
+      }
+    }
+  }
+
+  /* ---------------- Design ---------------- */
+  function renderDesign(site) {
+    var host = document.getElementById("design");
+    var d = site.design;
+    if (!host || !d || !d.items || !d.items.length) return;
+    host.innerHTML = "";
+    host.appendChild(el("h2", "cs-title", "Design"));
+    if (d.intro) host.appendChild(el("p", "cs-intro", d.intro));
+
+    var gallery = d.items.map(function (it) {
+      var name = it.img.replace("assets/projects/", "assets/img/").replace(/\.\w+$/, "");
+      return { full: name + "-lg.webp", alt: it.caption || "", caption: it.caption || "" };
+    });
+
+    var grid = el("div", "design-grid");
+    d.items.forEach(function (it, i) {
+      var name = it.img.replace("assets/projects/", "assets/img/").replace(/\.\w+$/, "");
+      var btn = el("button", "design-item");
+      btn.type = "button";
+      btn.setAttribute("aria-label", "Open design: " + (it.caption || ""));
+      var img = el("img");
+      img.src = name + "-lg.webp";
+      img.alt = it.caption || "";
+      img.loading = "lazy";
+      img.decoding = "async";
+      btn.appendChild(img);
+      btn.addEventListener("click", function () { openLightbox(gallery, i, btn); });
+      grid.appendChild(btn);
+    });
+    host.appendChild(grid);
+  }
+
   /* ---------------- More work ---------------- */
   function renderMoreWork(site) {
     var host = document.getElementById("more-work");
@@ -300,6 +440,8 @@
       var site = data[0], projects = data[1];
       renderHeader(site);
       renderProjects(projects);
+      renderContentSocial(site);
+      renderDesign(site);
       renderMoreWork(site);
       renderFooter(site);
       if (location.hash) {
