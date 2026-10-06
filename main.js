@@ -23,6 +23,8 @@
     "assets/projects/mis-website/01-home.png": [2880, 1800],
     "assets/projects/mis-website/02-what-we-do-html.png": [2880, 1800],
     "assets/projects/mis-website/03-programs-html.png": [2880, 1800],
+    "assets/projects/tackle-montana/01-home.png": [2880, 1800],
+    "assets/projects/tackle-montana/02-section.png": [2880, 1800],
     "assets/projects/email-automation/01-email-desktop.png": [1520, 2200],
     "assets/projects/email-automation/02-email-mobile.png": [1170, 3600],
     "assets/projects/email-automation/03-code.png": [2160, 14518],
@@ -88,7 +90,6 @@
   function renderProjects(projects) {
     var host = document.getElementById("projects");
     host.innerHTML = "";
-    host.appendChild(el("h2", "section-head", "Highlighted projects"));
     projects.forEach(function (p, i) { host.appendChild(renderProject(p, i)); });
   }
 
@@ -468,9 +469,6 @@
       var site = data[0], projects = data[1];
       renderHeader(site);
       renderProjects(projects);
-      renderWebsites(site);
-      renderContentSocial(site);
-      renderDesign(site);
       renderFooter(site);
       if (location.hash) {
         var t = document.getElementById(location.hash.slice(1));

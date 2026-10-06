@@ -346,5 +346,25 @@
       }
     ],
     "mediaTodo": []
+  },
+  {
+    "id": "tackle-montana",
+    "title": "TACKLE Montana",
+    "org": "Montana Institute of Sport",
+    "headline": "Built the site for TACKLE Montana, free on-field tackle coaching that brings rugby-based technique and safer contact to Montana football teams at no cost to schools.",
+    "liveUrl": "https://tacklemontana.org",
+    "liveNote": null,
+    "media": [
+      {
+        "src": "assets/projects/tackle-montana/01-home.png",
+        "alt": "TACKLE Montana homepage with the headline Tackle Tech for Montana Football",
+        "caption": "Homepage"
+      },
+      {
+        "src": "assets/projects/tackle-montana/02-section.png",
+        "alt": "TACKLE Montana stats: $0 cost to schools, 45 minutes per session, 200+ Montana school partners",
+        "caption": "Free coaching, built for the contact zone"
+      }
+    ]
   }
 ]
