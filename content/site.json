@@ -13,7 +13,7 @@
     { "title": "Montana Varsity Rugby Initiative", "owner": "Montana Institute of Sport", "url": "https://varsityrugbymontana.org", "img": "assets/projects/varsity-rugby/01-hero.png" },
     { "title": "Great Northwest Challenge", "owner": "Montana Institute of Sport", "url": "https://bengfreund-web.github.io/great-northwest-challenge/", "img": "assets/projects/great-northwest-challenge/homepage.png" },
     { "title": "TACKLE Montana", "owner": "Montana Institute of Sport", "url": "https://tacklemontana.org", "img": "assets/projects/tackle-montana/homepage.png" },
-    { "title": "Varsity College Rugby", "owner": "Advocacy project", "url": "https://bengfreund-web.github.io/varsity-college-rugby/", "img": "assets/projects/varsity-college-rugby/homepage.png" }
+    { "title": "Varsity College Rugby", "url": "https://bengfreund-web.github.io/varsity-college-rugby/", "img": "assets/projects/varsity-college-rugby/homepage.png" }
   ],
   "contentSocial": {
     "video": {
@@ -26,6 +26,7 @@
   },
   "design": {
     "items": [
+      { "img": "assets/projects/design/gnc-dream-team.jpg", "caption": "GNC Dream Team: High School Boys D1 coaches poll" },
       { "img": "assets/projects/design/p2-2.png", "caption": "MIS fundraising: Italian wine tasting save the date" },
       { "img": "assets/projects/design/p4-1.png", "caption": "Montana Invitational tournament graphic" },
       { "img": "assets/projects/design/p3-1.png", "caption": "Referee course promotion" },
