@@ -35,13 +35,20 @@
       "project": "usa-rugby-analytics"
     }
   ],
+  "websites": [
+    { "title": "Montana Institute of Sport", "owner": "Montana Institute of Sport", "url": "https://montanainstituteofsport.org", "img": "assets/projects/mis-website/01-home.png" },
+    { "title": "TRY Sport", "owner": "Montana Institute of Sport", "url": "https://trysport.org", "img": "assets/projects/try-sport/02-homepage-hero.png" },
+    { "title": "Montana Varsity Rugby Initiative", "owner": "Montana Institute of Sport", "url": "https://varsityrugbymontana.org", "img": "assets/projects/varsity-rugby/01-hero.png" },
+    { "title": "Montana Invitational", "owner": "Montana Institute of Sport", "url": "https://bengfreund-web.github.io/montana-invitational/", "img": "assets/projects/montana-invitational/homepage.png" },
+    { "title": "Great Northwest Challenge", "owner": "Montana Institute of Sport", "url": "https://bengfreund-web.github.io/great-northwest-challenge/", "img": "assets/projects/great-northwest-challenge/homepage.png" },
+    { "title": "National 10s", "owner": "Montana Institute of Sport", "url": "https://bengfreund-web.github.io/n10s-site/", "img": "assets/projects/national-10s/homepage.png" },
+    { "title": "TACKLE Montana", "owner": "Montana Institute of Sport", "url": "https://tacklemontana.org", "img": "assets/projects/tackle-montana/homepage.png" },
+    { "title": "The 26 Club", "owner": "Montana Institute of Sport", "url": "https://the26club.org", "img": "assets/projects/the-26-club/homepage.png", "note": "Members only" },
+    { "title": "Varsity College Rugby", "owner": "Advocacy project", "url": "https://bengfreund-web.github.io/varsity-college-rugby/", "img": "assets/projects/varsity-college-rugby/homepage.png" }
+  ],
   "contentSocial": {
     "intro": "Alongside the sites, I run the social media and video for these programs.",
-    "stats": [
-      { "value": "385.5K", "label": "views" },
-      { "value": "62.3K", "label": "accounts reached" }
-    ],
-    "statNote": "in two months on {ig}, the Instagram I run",
+    "campaign": "I ran the GNC Dream Team campaign: the pitch, the player selection, and the content.",
     "instagram": "https://www.instagram.com/greatnorthwestchallenge/",
     "instagramHandle": "@greatnorthwestchallenge",
     "video": {
@@ -77,44 +84,5 @@
       { "img": "assets/projects/design/p5-4.png", "caption": "Montana Youth Rugby graphic" }
     ]
   },
-  "moreWork": [
-    {
-      "title": "TACKLE Montana",
-      "org": "Montana Institute of Sport",
-      "blurb": "Free, rugby-based tackle-technique coaching for Montana football teams: safer work in the contact zone, with tracking.",
-      "url": "https://tacklemontana.org"
-    },
-    {
-      "title": "The 26 Club",
-      "org": "Montana Institute of Sport",
-      "blurb": "Members' site for the Montana Institute of Sport's 26 Club: trips, films, and what's next.",
-      "url": "https://the26club.org",
-      "note": "Members only"
-    },
-    {
-      "title": "Montana Invitational",
-      "org": "Montana Institute of Sport",
-      "blurb": "Tournament site for the Montana Invitational high school rugby tournament, Bozeman, April 2027.",
-      "url": "https://bengfreund-web.github.io/montana-invitational/"
-    },
-    {
-      "title": "Great Northwest Challenge",
-      "org": "Montana Institute of Sport",
-      "blurb": "Stay-and-play high school rugby tournament at Montana State University, June 2027, with an interactive college-recruiter map.",
-      "url": "https://bengfreund-web.github.io/great-northwest-challenge/"
-    },
-    {
-      "title": "National 10s",
-      "org": "Montana Institute of Sport",
-      "blurb": "Tournament site for the National 10s rugby championship for U16 and middle school boys, Bozeman, May 2027.",
-      "url": "https://bengfreund-web.github.io/n10s-site/"
-    },
-    {
-      "title": "Varsity College Rugby",
-      "org": "Advocacy project",
-      "blurb": "Advocacy microsite making the case for varsity rugby as a new college sport and enrollment channel.",
-      "url": "https://bengfreund-web.github.io/varsity-college-rugby/"
-    }
-  ],
   "footer": "Built with Claude Code. Hosted on GitHub Pages."
 }

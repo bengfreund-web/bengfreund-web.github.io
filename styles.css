@@ -155,7 +155,30 @@ a { color: inherit; }
   .project-link { align-self: start; }
 }
 
+/* ---------- Section headings ---------- */
+.section-head { font-weight: 600; font-size: 1.15rem; margin: 0 0 14px; }
+#projects > .section-head { padding-top: 8px; }
+
+/* ---------- Websites ---------- */
+.websites { border-top: 1px solid var(--line); padding: 52px 0; }
+.web-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px 24px; margin-top: 4px; }
+.web-card { display: block; text-decoration: none; color: inherit; }
+.web-thumb {
+  border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+  aspect-ratio: 16 / 10; background: var(--paper);
+}
+.web-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.web-card:hover .web-thumb { border-color: var(--ink); }
+.web-meta { padding: 12px 2px 0; }
+.web-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.web-title { font-weight: 600; font-size: 1.02rem; }
+.web-card:hover .web-title { text-decoration: underline; text-underline-offset: 3px; }
+.web-owner { color: var(--muted); font-size: 0.9rem; margin: 3px 0 0; }
+@media (max-width: 900px) { .web-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .web-grid { grid-template-columns: 1fr; } }
+
 /* ---------- Content & social ---------- */
+.cs-campaign { font-size: 0.98rem; font-weight: 500; margin: 0 0 4px; max-width: var(--measure); }
 .content-social { border-top: 1px solid var(--line); padding: 52px 0; }
 .cs-title { font-weight: 600; font-size: 1.15rem; margin: 0 0 6px; }
 .cs-intro { color: var(--muted); font-size: 1rem; margin: 0 0 26px; max-width: var(--measure); }

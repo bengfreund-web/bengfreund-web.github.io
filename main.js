@@ -88,7 +88,34 @@
   function renderProjects(projects) {
     var host = document.getElementById("projects");
     host.innerHTML = "";
+    host.appendChild(el("h2", "section-head", "Highlighted projects"));
     projects.forEach(function (p, i) { host.appendChild(renderProject(p, i)); });
+  }
+
+  /* ---------------- Websites ---------------- */
+  function renderWebsites(site) {
+    var host = document.getElementById("websites");
+    var list = site.websites || [];
+    if (!host || !list.length) return;
+    host.innerHTML = "";
+    host.appendChild(el("h2", "section-head", "Websites"));
+    var grid = el("div", "web-grid");
+    list.forEach(function (w, i) {
+      var a = el("a", "web-card");
+      a.href = w.url; a.target = "_blank"; a.rel = "noopener";
+      var thumb = el("div", "web-thumb");
+      thumb.appendChild(buildImg({ src: w.img, alt: w.title + " homepage" }, i < 3, "(max-width: 720px) 92vw, 320px"));
+      a.appendChild(thumb);
+      var meta = el("div", "web-meta");
+      var head = el("div", "web-head");
+      head.appendChild(el("span", "web-title", w.title));
+      if (w.note) head.appendChild(el("span", "mw-tag", w.note));
+      meta.appendChild(head);
+      if (w.owner) meta.appendChild(el("p", "web-owner", w.owner));
+      a.appendChild(meta);
+      grid.appendChild(a);
+    });
+    host.appendChild(grid);
   }
 
   function renderProject(p, i) {
@@ -243,8 +270,9 @@
     var cs = site.contentSocial;
     if (!host || !cs) return;
     host.innerHTML = "";
-    host.appendChild(el("h2", "cs-title", "Content & social"));
+    host.appendChild(el("h2", "cs-title", "Videos"));
     if (cs.intro) host.appendChild(el("p", "cs-intro", cs.intro));
+    if (cs.campaign) host.appendChild(el("p", "cs-campaign", cs.campaign));
 
     // Stats
     if (cs.stats && cs.stats.length) {
@@ -440,9 +468,9 @@
       var site = data[0], projects = data[1];
       renderHeader(site);
       renderProjects(projects);
+      renderWebsites(site);
       renderContentSocial(site);
       renderDesign(site);
-      renderMoreWork(site);
       renderFooter(site);
       if (location.hash) {
         var t = document.getElementById(location.hash.slice(1));
