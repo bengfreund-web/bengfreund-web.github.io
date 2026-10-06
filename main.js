@@ -305,7 +305,7 @@
       var vcap = el("p", "cs-video-cap");
       vcap.appendChild(el("span", "cs-video-title", v.title));
       var chan = el("span", "cs-video-chan");
-      chan.appendChild(document.createTextNode(" " + v.channel + " (" + v.channelMeta + ")"));
+      chan.appendChild(document.createTextNode(" " + v.channel + (v.channelMeta ? " (" + v.channelMeta + ")" : "")));
       vcap.appendChild(chan);
       host.appendChild(vcap);
     }

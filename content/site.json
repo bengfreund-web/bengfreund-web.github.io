@@ -1,81 +1,33 @@
 {
   "name": "Benjamin Freund",
   "tagline": "Cal Poly business analytics student building data tools and automation for USA Rugby and Montana sport organizations.",
-  "howIBuild": "I scope each problem with the people who will use it, write the spec, and ship it with Claude Code.",
   "links": {
     "resume": "assets/resume/Benjamin-Freund-Resume.pdf",
     "linkedin": "https://linkedin.com/in/benfreund145",
     "github": "https://github.com/bengfreund-web",
     "email": "bgfreund@calpoly.edu"
   },
-  "impactBar": [
-    {
-      "value": "89,000+",
-      "label": "Montana students reached",
-      "project": "try-sport"
-    },
-    {
-      "value": "2,000+",
-      "label": "interest forms answered automatically",
-      "project": "email-automation"
-    },
-    {
-      "value": "2,615",
-      "label": "registrations turned into insights",
-      "project": "myru-registration"
-    },
-    {
-      "value": "$0",
-      "label": "cost to schools for three varsity seasons",
-      "project": "varsity-rugby"
-    },
-    {
-      "value": "11",
-      "label": "Test matches analyzed for USA Rugby",
-      "project": "usa-rugby-analytics"
-    }
-  ],
   "websites": [
     { "title": "Montana Institute of Sport", "owner": "Montana Institute of Sport", "url": "https://montanainstituteofsport.org", "img": "assets/projects/mis-website/01-home.png" },
     { "title": "TRY Sport", "owner": "Montana Institute of Sport", "url": "https://trysport.org", "img": "assets/projects/try-sport/02-homepage-hero.png" },
     { "title": "Montana Varsity Rugby Initiative", "owner": "Montana Institute of Sport", "url": "https://varsityrugbymontana.org", "img": "assets/projects/varsity-rugby/01-hero.png" },
-    { "title": "Montana Invitational", "owner": "Montana Institute of Sport", "url": "https://bengfreund-web.github.io/montana-invitational/", "img": "assets/projects/montana-invitational/homepage.png" },
     { "title": "Great Northwest Challenge", "owner": "Montana Institute of Sport", "url": "https://bengfreund-web.github.io/great-northwest-challenge/", "img": "assets/projects/great-northwest-challenge/homepage.png" },
-    { "title": "National 10s", "owner": "Montana Institute of Sport", "url": "https://bengfreund-web.github.io/n10s-site/", "img": "assets/projects/national-10s/homepage.png" },
     { "title": "TACKLE Montana", "owner": "Montana Institute of Sport", "url": "https://tacklemontana.org", "img": "assets/projects/tackle-montana/homepage.png" },
-    { "title": "The 26 Club", "owner": "Montana Institute of Sport", "url": "https://the26club.org", "img": "assets/projects/the-26-club/homepage.png", "note": "Members only" },
     { "title": "Varsity College Rugby", "owner": "Advocacy project", "url": "https://bengfreund-web.github.io/varsity-college-rugby/", "img": "assets/projects/varsity-college-rugby/homepage.png" }
   ],
   "contentSocial": {
-    "intro": "Alongside the sites, I run the social media and video for these programs.",
-    "campaign": "I ran the GNC Dream Team campaign: the pitch, the player selection, and the content.",
-    "instagram": "https://www.instagram.com/greatnorthwestchallenge/",
-    "instagramHandle": "@greatnorthwestchallenge",
     "video": {
       "title": "Great Northwest Challenge Rugby Tournament 2026 Recap",
       "url": "https://www.youtube.com/watch?v=gUOQj7AJZYA",
       "img": "assets/projects/social/yt-gUOQj7AJZYA.jpg",
       "channel": "Montana Institute of Sport on YouTube",
-      "channelUrl": "https://www.youtube.com/@MontanaInstituteOfSport",
-      "channelMeta": "860 subscribers and 230 videos"
-    },
-    "posts": [
-      { "img": "assets/projects/social/ig-gnc-DZ8H_8fDC6H.jpg", "url": "https://www.instagram.com/p/DZ8H_8fDC6H/", "alt": "Great Northwest Challenge Instagram post" },
-      { "img": "assets/projects/social/ig-gnc-DZi0Ad9htVm.jpg", "url": "https://www.instagram.com/p/DZi0Ad9htVm/", "alt": "Great Northwest Challenge Instagram post" },
-      { "img": "assets/projects/social/ig-mi-DXadTO0D90z.jpg", "url": "https://www.instagram.com/p/DXadTO0D90z/", "alt": "Montana Invitational Instagram post" },
-      { "img": "assets/projects/social/ig-mi-DXk1r2HGv7N.jpg", "url": "https://www.instagram.com/p/DXk1r2HGv7N/", "alt": "Montana Invitational Instagram post" }
-    ],
-    "postsNote": "A few posts from {gnc} and {mi}, both accounts I run.",
-    "miInstagram": "https://www.instagram.com/montanainvitational/",
-    "miHandle": "@montanainvitational"
+      "channelUrl": "https://www.youtube.com/@MontanaInstituteOfSport"
+    }
   },
   "design": {
-    "intro": "I also design the event flyers, fundraising invites, and social graphics for these programs.",
     "items": [
-      { "img": "assets/projects/design/p2-1.png", "caption": "MIS fundraising: All Blacks v Ireland dinner, Chicago" },
       { "img": "assets/projects/design/p2-2.png", "caption": "MIS fundraising: Italian wine tasting save the date" },
       { "img": "assets/projects/design/p4-1.png", "caption": "Montana Invitational tournament graphic" },
-      { "img": "assets/projects/design/p4-2.png", "caption": "Montana Invitational tournament graphic" },
       { "img": "assets/projects/design/p3-1.png", "caption": "Referee course promotion" },
       { "img": "assets/projects/design/p3-2.png", "caption": "Referee course promotion" },
       { "img": "assets/projects/design/p5-1.png", "caption": "Montana Youth Rugby graphic" },
