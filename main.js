@@ -20,6 +20,9 @@
     "assets/projects/try-sport/01-impact-tracker.png": [2270, 1961],
     "assets/projects/try-sport/02-homepage-hero.png": [2400, 1234],
     "assets/projects/try-sport/03-teacher-testimonial.png": [2270, 1236],
+    "assets/projects/mis-website/01-home.png": [2880, 1800],
+    "assets/projects/mis-website/02-what-we-do-html.png": [2880, 1800],
+    "assets/projects/mis-website/03-programs-html.png": [2880, 1800],
     "assets/projects/email-automation/01-email-desktop.png": [1520, 2200],
     "assets/projects/email-automation/02-email-mobile.png": [1170, 3600],
     "assets/projects/email-automation/03-code.png": [2160, 14518]
@@ -193,6 +196,30 @@
     return car;
   }
 
+  /* ---------------- More work ---------------- */
+  function renderMoreWork(site) {
+    var host = document.getElementById("more-work");
+    if (!host) return;
+    var list = site.moreWork || [];
+    if (!list.length) return;
+    host.innerHTML = "";
+    host.appendChild(el("h2", "more-work-title", "More work"));
+    var grid = el("div", "mw-grid");
+    list.forEach(function (w) {
+      var a = el("a", "mw-item");
+      a.href = w.url;
+      a.target = "_blank";
+      a.rel = "noopener";
+      var head = el("div", "mw-head");
+      head.appendChild(el("span", "mw-title", w.title));
+      if (w.note) head.appendChild(el("span", "mw-tag", w.note));
+      a.appendChild(head);
+      if (w.blurb) a.appendChild(el("p", "mw-blurb", w.blurb));
+      grid.appendChild(a);
+    });
+    host.appendChild(grid);
+  }
+
   /* ---------------- Footer ---------------- */
   function renderFooter(site) {
     var host = document.getElementById("site-footer");
@@ -273,6 +300,7 @@
       var site = data[0], projects = data[1];
       renderHeader(site);
       renderProjects(projects);
+      renderMoreWork(site);
       renderFooter(site);
       if (location.hash) {
         var t = document.getElementById(location.hash.slice(1));

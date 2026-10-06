@@ -35,5 +35,44 @@
       "project": "usa-rugby-analytics"
     }
   ],
+  "moreWork": [
+    {
+      "title": "TACKLE Montana",
+      "org": "Montana Institute of Sport",
+      "blurb": "Free, rugby-based tackle-technique coaching for Montana football teams: safer work in the contact zone, with tracking.",
+      "url": "https://tacklemontana.org"
+    },
+    {
+      "title": "The 26 Club",
+      "org": "Montana Institute of Sport",
+      "blurb": "Members' site for the Montana Institute of Sport's 26 Club: trips, films, and what's next.",
+      "url": "https://the26club.org",
+      "note": "Members only"
+    },
+    {
+      "title": "Montana Invitational",
+      "org": "Montana Institute of Sport",
+      "blurb": "Tournament site for the Montana Invitational high school rugby tournament, Bozeman, April 2027.",
+      "url": "https://bengfreund-web.github.io/montana-invitational/"
+    },
+    {
+      "title": "Great Northwest Challenge",
+      "org": "Montana Institute of Sport",
+      "blurb": "Stay-and-play high school rugby tournament at Montana State University, June 2027, with an interactive college-recruiter map.",
+      "url": "https://bengfreund-web.github.io/great-northwest-challenge/"
+    },
+    {
+      "title": "National 10s",
+      "org": "Montana Institute of Sport",
+      "blurb": "Tournament site for the National 10s rugby championship for U16 and middle school boys, Bozeman, May 2027.",
+      "url": "https://bengfreund-web.github.io/n10s-site/"
+    },
+    {
+      "title": "Varsity College Rugby",
+      "org": "Advocacy project",
+      "blurb": "Advocacy microsite making the case for varsity rugby as a new college sport and enrollment channel.",
+      "url": "https://bengfreund-web.github.io/varsity-college-rugby/"
+    }
+  ],
   "footer": "Built with Claude Code. Hosted on GitHub Pages."
 }

@@ -265,6 +265,31 @@
     ]
   },
   {
+    "id": "mis-website",
+    "title": "Montana Institute of Sport Website",
+    "org": "Montana Institute of Sport",
+    "headline": "Rebuilt the Montana Institute of Sport's website as a fast static site with no CMS to maintain, now live on their own domain with the organization's programs, partnerships, and donation flow.",
+    "liveUrl": "https://montanainstituteofsport.org",
+    "liveNote": null,
+    "media": [
+      {
+        "src": "assets/projects/mis-website/01-home.png",
+        "alt": "Montana Institute of Sport homepage with the headline Better young Montanans through physical education",
+        "caption": "Homepage"
+      },
+      {
+        "src": "assets/projects/mis-website/02-what-we-do-html.png",
+        "alt": "Montana Institute of Sport What We Do page",
+        "caption": "What we do"
+      },
+      {
+        "src": "assets/projects/mis-website/03-programs-html.png",
+        "alt": "Montana Institute of Sport programs page",
+        "caption": "Programs"
+      }
+    ]
+  },
+  {
     "id": "email-automation",
     "title": "Automated Interest-to-Registration Email System",
     "org": "Montana Youth Rugby Union",

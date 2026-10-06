@@ -155,6 +155,37 @@ a { color: inherit; }
   .project-link { align-self: start; }
 }
 
+/* ---------- More work ---------- */
+.more-work { border-top: 1px solid var(--line); padding: 52px 0 8px; }
+.more-work-title {
+  font-weight: 600;
+  font-size: 1.15rem;
+  margin: 0 0 8px;
+}
+.mw-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 56px; }
+.mw-item {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+}
+.mw-head { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.mw-title { font-weight: 600; font-size: 1.02rem; }
+.mw-item:hover .mw-title { text-decoration: underline; text-underline-offset: 3px; }
+.mw-tag {
+  font-size: 0.72rem;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 2px 9px;
+}
+.mw-blurb { color: var(--muted); font-size: 0.92rem; line-height: 1.5; margin: 6px 0 0; max-width: 46ch; }
+
+@media (max-width: 720px) {
+  .mw-grid { grid-template-columns: 1fr; }
+}
+
 /* ---------- How I build + footer ---------- */
 .how-i-build { border-top: 1px solid var(--line); padding: 40px 0; color: var(--muted); font-size: 0.95rem; max-width: var(--measure); }
 .site-footer { border-top: 1px solid var(--line); margin-top: 20px; }
